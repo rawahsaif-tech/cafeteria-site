@@ -1,4 +1,4 @@
-// حفظ بيانات الطالب
+// SAVE user details
 
 function saveStudent() {
 
