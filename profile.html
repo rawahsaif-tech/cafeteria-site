@@ -9,13 +9,43 @@
 
 <header>
   <h2>👩‍🎓 STUDENT ACCOUNT</h2>
+  <nav>
+    <a href="index.html"Home</a>
+    <a href="menu.html"Menu</a>
+    <a href="cart.html"Cart</a> 
+  </nav>
 </header>
 
 <div class="container">
-  <div class="card">الاسم: طالبة جامعية</div>
-  <div class="card">البريد: student@uni.edu</div>
-  <button>تسجيل الخروج</button>
+  <div class="card">NAME</div>
+  <div class="card">ID NUMBER</div>
+  <h3>order log</h3>
+  <div id="orders"></div>
+  <button onclick= "logout()">LOG OUT</button>
 </div>
+<script>
+function loadOrders() {
+ const orders = JSON.parse(localStorage.getItem("orders")) || [];
+ const list = document.getElementById("orders");
+ list.innerHTML = "";
+ if (orders.length === 0) {
+   list.innerHTML = "<p>No previous request</p>";
+   return;
+ }
+ orders.forEach(item => {
+   list.innerHTML += `
+<div class="card">
+       ${item.name} - ${item.price} O.R
+</div>
+   `;
+ });
+}
+function logout() {
+ alert("LOGGED OUT");
+ window.location.href = "index.html";
+}
+loadOrders();
+</script>
 
 </body>
 </html>
