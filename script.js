@@ -1,8 +1,15 @@
 // بيانات الوجبات
 const foods = JSON.parse(localStorage.getItem("foods")) || [
-  { id: 1, name: "برجر", price: 1.5, type: "وجبات" },
-  { id: 2, name: "ساندويتش", price: 1, type: "وجبات" },
-  { id: 3, name: "قهوة", price: 0.5, type: "مشروبات" },
+  { id: 1, name: "Beef Burgrt", price: 1.5, type: "meal" },
+  { id: 2, name: "Chicken Burger", price: 1.5, type: "meal" },
+  { id: 3, name: "Beef Shawarma", price: 1.0, type: "meal" },
+  { id: 4, name: "Chicken Shawarma", price: 1.0, type: "meal" },
+  { id: 5, name: "Fries", price: 0.7, type: "meal" },
+  { id: 6, name: "Salad", price: 0.5, type: "meal" },
+  { id: 7, name: "Orange juice", price: 1.2, type: "drink" },
+  { id: 8, name: "Mango juice", price: 1.2, type: "drink" },
+  { id: 9, name: "Tea", price: 0.1, type: "drink" },
+  { id: 10, name: "Black coffee", price: 1.0, type: "drink" },
 ];
 
 localStorage.setItem("foods", JSON.stringify(foods));
